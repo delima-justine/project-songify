@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-main-page',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './main-page.scss',
 })
 export class MainPage {
+  isPlaying = signal(false);
 
+  togglePlay() {
+    this.isPlaying.set(!this.isPlaying());
+  }
 }
