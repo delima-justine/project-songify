@@ -29,8 +29,9 @@
         <div class="play-button-container">
           <button 
             type="button" 
-            class="btn btn-success">
-              <i class="bi bi-play-fill"></i>
+            class="btn btn-success"
+            (click)="togglePlay()">
+              <i [class]="isPlaying() ? 'bi bi-pause-fill' : 'bi bi-play-fill'"></i>
           </button>
         </div>
       </div>
